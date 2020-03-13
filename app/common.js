@@ -8,6 +8,7 @@ function add_user() {
     dob = document.getElementById("dob").value;
     email = document.getElementById("email").value;
     gender = document.getElementById("gender").value;
+    if (username != null && gender != null && height != null && weight != null){
 
              var data = {
               _id: new Date().toISOString(),
@@ -24,6 +25,11 @@ function add_user() {
     window.location.assign("index.html");  
                     } 
                 });
+    }else{
+    window.location.assign("register.html");  
+
+    }
+
 }
 function update() {
     var user = new PouchDB('user');

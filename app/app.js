@@ -3,9 +3,10 @@
         var user = new PouchDB('user');
 
         // create a message to display in our view
-        $scope.message = 'Excited to build hybrid app!';
+        $scope.message = 'all good';
         $scope.name = 'Kaa Fiti';
-        $scope.showImage=false;
+            $scope.title ="Home";
+            $scope.showImage=false;
         $http.get("./data/food.json")
         .then(function(response) {
           $scope.content = response.data;
